@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - San Anivia</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600&family=Young+Serif&display=swap');
+    </style>
+    
+    <link rel="stylesheet" href="./assets/styles/styles_snapping.css">
+    
+    <link rel="stylesheet" href="./assets/styles/styles_snapping2.css">
+</head>
+<body>
+
+    <div class="page1-header" style="position: relative; left: 0; transform: none; width: 100%; max-width: none;">
+        <div class="header-banner" style="height: 180px;">
+            <h1 class="san-anivia-title" style="top: 15px;">San Anivia / Registro de Cuentas</h1>
+        </div>
+        <div class="red-bar-menu" style="top: -5px;">
+            <a href="index.html" class="menu-item" style="text-decoration: none;">
+                <span class="menu-text">Volver al Inicio</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form id="registroForm">
+            <h2>Crear Nueva Cuenta</h2>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="celular">Número de Celular:</label>
+                <input type="tel" id="celular" name="celular" placeholder="Ej: +51 987 654 321" required>
+            </div>
+            
+            <button type="submit" class="button-enviar">Enviar Registro</button>
+        </form>
+    </div>
+
+    <script src="./assets/scripts/main2.js"></script>
+
+</body>
+</html>
