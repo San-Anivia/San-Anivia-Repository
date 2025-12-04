@@ -1,81 +1,245 @@
+/* REINICIO */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    background: #f9f9f9; 
+    background: #f4f7f6; /* Tu fondo original del registro */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     overflow-y: auto;
-    overflow-x: hidden;
-    height: auto;
+    font-family: 'Work Sans', sans-serif;
+    padding-bottom: 50px;
 }
+
+/* =========================================
+   1. ESTILOS DE CABECERA (IDÉNTICOS AL INDEX 3)
+   IMPORTANTE: Esto pinta la barra Naranja y Roja
+   ========================================= */
+
+.page1-header {
+    width: 100%;
+}
+
+/* BANNER NARANJA */
+.header-banner {
+    background-color: #E5842F; /* Naranja corporativo */
+    width: 100%;
+    min-height: 180px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.san-anivia-title {
+    font-family: 'Kaushan Script', cursive;
+    color: #FFFFFF;
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* BARRA ROJA */
+.red-bar-menu {
+    background-color: #DF2828; /* Rojo corporativo */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botones de Idioma */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover, .lang-btn.active {
+    background: white;
+    color: #E5842F;
+}
+
+/* Enlaces del menú (Volver al Inicio) */
+.menu-item {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 25px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.15);
+    transition: background 0.3s;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.menu-text {
+    font-family: 'Barlow', sans-serif;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   2. ESTILOS DEL FORMULARIO (TU CÓDIGO ORIGINAL)
+   ========================================= */
+
 .form-container {
     max-width: 700px;
-    margin: 40px auto;
+    margin: 50px auto;
     padding: 40px;
     background: #FFFFFF;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 .form-container h2 {
     font-family: 'Barlow', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 32px; /* Ajustado ligeramente */
     text-transform: uppercase;
     color: #2D1C64;
     text-align: center;
+    margin-top: 0;
     margin-bottom: 30px; 
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
 }
+
+/* Sistema de filas (Nombre | Apellido) */
+.row-group {
+    display: flex;
+    gap: 20px;
+}
+
+.half {
+    width: 50%;
+}
+
 .form-group {
-    background: #FFFFFF;
-    border: 1px solid #e0e0e0; 
-    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
     padding: 10px 15px; 
     margin-bottom: 20px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: all 0.3s;
+    position: relative;
 }
+
 .form-group:focus-within {
     border-color: #E5842F; 
-    box-shadow: 0 0 0 3px rgba(229, 132, 47, 0.1); 
+    box-shadow: 0 0 0 4px rgba(229, 132, 47, 0.1); 
 }
+
 .form-group label {
     display: block;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"] {
+
+.form-group input {
     width: 100%;
     border: none; 
     outline: none; 
-    padding: 5px 0 0 0; 
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    color: #333;
     background: transparent; 
-    box-sizing: border-box;
+    padding: 5px 0;
 }
+
+/* Checkbox */
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.terms-group input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Botón Enviar */
 .button-enviar {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 18px 20px;
-    gap: 16px;
+    padding: 15px;
     background: #FF5F57;
-    border-radius: 12px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    color: #FCFCFC;
-    transition: background 0.2s;
-    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 95, 87, 0.3);
 }
+
 .button-enviar:hover {
     background: #e04a42;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 95, 87, 0.4);
 }
-.red-bar-menu .menu-item {
-    cursor: pointer;
+
+/* =========================================
+   3. RESPONSIVE (CELULAR)
+   ========================================= */
+@media (max-width: 600px) {
+    .san-anivia-title {
+        font-size: 2.2rem;
+    }
+    
+    .form-container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    /* Las filas se vuelven columna en celular */
+    .row-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .half {
+        width: 100%;
+    }
 }
