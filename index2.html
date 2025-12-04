@@ -3,58 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta - San Anivia</title>
+    <title>Registro - San Anivia</title>
     
+    <!-- Fuentes -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600&family=Young+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600;700&family=Young+Serif&display=swap');
     </style>
     
-    <link rel="stylesheet" href="./assets/styles/styles_snapping.css">
-    
+    <!-- Vinculamos el estilo actualizado -->
     <link rel="stylesheet" href="./assets/styles/styles_snapping2.css">
 </head>
 <body>
 
-    <div class="page1-header" style="position: relative; left: 0; transform: none; width: 100%; max-width: none;">
-        <div class="header-banner" style="height: 180px;">
-            <h1 class="san-anivia-title" style="top: 15px;">San Anivia / Registro de Cuentas</h1>
+    <!-- CABECERA IDÉNTICA AL INDEX 3 -->
+    <div class="page1-header">
+        
+        <!-- 1. BANNER NARANJA -->
+        <div class="header-banner">
+            <div class="banner-content">
+                <h1 class="san-anivia-title" data-translate="header_title">
+                    San Anivia / Registro de Cuentas
+                </h1>
+                
+                <!-- Botones de Idioma -->
+                <div class="language-switcher">
+                    <button id="btn-es" class="lang-btn" onclick="changeLanguage('es')">🇪🇸 ES</button>
+                    <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">🇺🇸 EN</button>
+                </div>
+            </div>
         </div>
-        <div class="red-bar-menu" style="top: -5px;">
-            <a href="index.html" class="menu-item" style="text-decoration: none;">
-                <span class="menu-text">Volver al Inicio</span>
+
+        <!-- 2. BARRA ROJA -->
+        <div class="red-bar-menu">
+            <a href="index.html" class="menu-item">
+                <span class="menu-text" data-translate="nav_back">Volver al Inicio</span>
             </a>
         </div>
     </div>
 
+    <!-- FORMULARIO DE REGISTRO (Tu formulario original) -->
     <div class="form-container">
         <form id="registroForm">
-            <h2>Crear Nueva Cuenta</h2>
+            <h2 data-translate="form_title">CREAR NUEVA CUENTA</h2>
             
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
+            <div class="row-group">
+                <div class="form-group half">
+                    <label for="nombre" data-translate="label_name">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group half">
+                    <label for="apellido" data-translate="label_lastname">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
+                <label for="email" data-translate="label_email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             
             <div class="form-group">
-                <label for="celular">Número de Celular:</label>
-                <input type="tel" id="celular" name="celular" placeholder="Ej: +51 987 654 321" required>
+                <label for="celular" data-translate="label_phone">Número de Celular:</label>
+                <input type="tel" id="celular" name="celular" data-translate="placeholder_phone" placeholder="Ej: +51 987 654 321" required>
+            </div>
+
+            <div class="row-group">
+                <div class="form-group half">
+                    <label for="password" data-translate="label_pass">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group half">
+                    <label for="confirm_password" data-translate="label_pass_confirm">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
             </div>
             
-            <button type="submit" class="button-enviar">Enviar Registro</button>
+            <div class="terms-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" data-translate="label_terms">Acepto los términos y condiciones</label>
+            </div>
+
+            <button type="submit" class="button-enviar" data-translate="btn_submit">Registrarse</button>
         </form>
     </div>
 
-    <script src="./assets/scripts/main2.js"></script>
+    <script src="./assets/scripts/translation.js"></script>
 
 </body>
 </html>
