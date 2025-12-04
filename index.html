@@ -1,290 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web San Anivia</title>
-    <link rel="stylesheet" href="./assets/styles/styles_snapping.css"> 
     
     <style>
-        /* Importación de fuentes (Simplificada para ejecución) */
-        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600&family=Young+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Work+Sans:wght@400;600&family=Poppins:wght@600&family=Spline+Sans+Mono&family=Young+Serif&display=swap');
     </style>
+    
+    <link rel="stylesheet" href="./assets/styles/styles_snapping.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="scroll-container">
-      
-        <section class="slide slide-1 contact-page">
-            <div class="page1-contact-main">
-                
-                <div class="page1-header">
-                    <div class="header-banner">
-                        
-                        <h1 class="san-anivia-title" style="top: 50%; transform: translateY(-50%); width: 100%; text-align: center; font-size: 3.5vw;">
-                            San Anivia / Proveedores
-                        </h1>
 
-                    </div>
-                    
-                    <div class="red-bar-menu">
-                        <div class="menu-item"><span class="menu-text">Preguntas</span></div>
-                        <div class="menu-item"><span class="menu-text">Rutas</span></div>
-                        <div class="menu-item"><span class="menu-text">Perfil</span></div>
-                        <div class="menu-item"><span class="menu-text">Contáctanos</span></div>
-                    </div>
-                <div class="hero-content-box">
-                    <h1 class="hero-title-main">Innovación y Calidad en Distribución Avícola</h1>
-                    <p class="hero-text-main">
-                        En <strong>San Anivia</strong>, redefinimos la excelencia en el sector avícola. 
-                        No solo proveemos productos de la más alta calidad, sino que revolucionamos la entrega de pedidos. 
-                        A través de sistemas de <strong>automatización</strong> de última generación y una 
-                        plataforma de <strong>trazabilidad</strong> completa, garantizamos que cada entrega 
-                        llegue a su destino con precisión, frescura y una eficiencia sin precedentes.
-                    </p>
-                </div>
-                
+    <!-- 1. CABECERA -->
+    <header class="main-header">
+        <div class="header-top orange-bg">
+            <div class="brand-group">
+                <img src="./assets/images/LOGO_SAN_ANIVIA.png" alt="Logo San Anivia" class="header-logo">
+                <h1 class="logo-text" data-translate="header_main">San Anivia / Proveedores</h1>
             </div>
-        </section>
+            
+            <div class="language-switcher">
+                <button id="btn-es" class="lang-btn" onclick="changeLanguage('es')">🇪🇸 ES</button>
+                <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">🇺🇸 EN</button>
+            </div>
+        </div>
+        
+        <nav class="header-nav red-bg">
+            <a href="index5.html" class="nav-item" data-translate="menu_faq">Preguntas</a>
+            <a href="index4.html" class="nav-item" data-translate="menu_routes">Rutas</a>
+            <a href="index2.html" class="nav-item" data-translate="menu_profile">Registro</a>
+            <a href="index3.html" class="nav-item" data-translate="menu_contact">Contacto</a>
+        </nav>
+    </header>
 
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 data-translate="hero_title">Innovación y Calidad en Distribución Avícola</h1>
+            <p data-translate="hero_desc">En San Anivia, redefinimos la excelencia en el sector avícola con automatización y trazabilidad.</p>
+            <a href="index2.html" class="cta-button" data-translate="btn_start">Empezar Ahora</a>
+        </div>
+    </section>
 
-        <section class="slide slide-2 hero-page">
-            <div class="desktop-main-hero"> 
-                
-                <h1 class="studio-title">San Anivia</h1> 
-                <p class="prox-lideres-text">PROXIMOS</p>
-                <p class="prox-lideres-text lideres-pos">LIDERES</p>
-                <p class="prox-lideres-text producto-pos">PRODUCTORES</p>
-                <p class="avicola-text">[AVÍCOLAS]</p>
-                <p class="comparaciones-text">COMPARACIONES.......</p>
-                <div class="image-mask-group"></div>
-                <div class="planet-info">
-                    <span class="planet-name">NEXT TO TOP1</span>
-                    <span class="planet-number">CORPORATION</span>
-                </div>
-                
-            </div> 
-        </section>
-
-
-        <section class="slide slide-3">
-            <div class="ganancias-main-container">
-
-                <div class="ganancias-background"></div>
-
-                <div class="ganancias-page-title">
-                    <h3 class="page-title-text">TABLA COMPARATIVA DE RENDIMIENTO ANUAL</h3>
-                </div>
-                
-                <div class="page-header-brand">
-                    <img src="./assets/images/LOGO_SAN_ANIVIA.png" alt="Logo de San Anivia" class="brand-logo-placeholder">
-                    <h4 class="brand-title-text">San Anivia</h4>
-                </div>
-
-                <div class="ganancias-table-container">
-                    <div class="units-info">
-                        <p class="cantidad-unidad">Cantidad como unidad</p>
-                        <p class="toneladas-info">Toneladas...</p>
-                    </div>
-
-                    <div class="bar-chart-container">
-                        <div class="chart-header-group">
-                             <h4 class="chart-main-header">Evidencia de exito en ventas mensuales</h4>
-                             <div class="info-icon"></div>
-                        </div>
-                        
-                        <div class="bar-group group-1">
-                            <div class="bar-rect green-bar" style="width: 45%;"></div>
-                            <span class="bar-label">ENERO</span>
-                            <span class="bar-value">950 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-2">
-                            <div class="bar-rect yellow-bar" style="width: 55%;"></div>
-                            <span class="bar-label">FEBRERO</span>
-                            <span class="bar-value">1020 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-3">
-                            <div class="bar-rect red-bar" style="width: 75%;"></div>
-                            <span class="bar-label">MARZO</span>
-                            <span class="bar-value">1090 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-4">
-                            <div class="bar-rect green-bar" style="width: 40%;"></div>
-                            <span class="bar-label">ABRIL</span>
-                            <span class="bar-value">950 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-5">
-                            <div class="bar-rect yellow-bar" style="width: 80%;"></div>
-                            <span class="bar-label">MAYO</span>
-                            <span class="bar-value">1120 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-6">
-                            <div class="bar-rect red-bar" style="width: 70%;"></div>
-                            <span class="bar-label">JUNIO</span>
-                            <span class="bar-value">1075 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-7">
-                            <div class="bar-rect green-bar" style="width: 95%;"></div>
-                            <span class="bar-label">JULIO</span>
-                            <span class="bar-value">1250 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-8">
-                            <div class="bar-rect yellow-bar" style="width: 88%;"></div>
-                            <span class="bar-label">AGOSTO</span>
-                            <span class="bar-value">1180 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-9">
-                            <div class="bar-rect red-bar" style="width: 50%;"></div>
-                            <span class="bar-label">SEPTIEMBRE</span>
-                            <span class="bar-value">970 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-10">
-                            <div class="bar-rect green-bar" style="width: 77%;"></div>
-                            <span class="bar-label">OCTUBRE</span>
-                            <span class="bar-value">1100 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-11">
-                            <div class="bar-rect yellow-bar" style="width: 60%;"></div>
-                            <span class="bar-label">NOVIEMBRE</span>
-                            <span class="bar-value">1055 Toneladas</span>
-                        </div>
-                        
-                        <div class="bar-group group-12">
-                            <div class="bar-rect red-bar" style="width: 90%;"></div>
-                            <span class="bar-label">DICIEMBRE</span>
-                            <span class="bar-value">1185 Toneladas</span>
-                        </div>
-                    </div>
+    <!-- 3. PRODUCTO (FOTO POLLO) -->
+    <section class="info-section split-layout">
+        <div class="info-text-side">
+            <h2 class="section-title align-left" data-translate="title_product">Sobre el Producto</h2>
+            <p class="section-desc align-left" data-translate="desc_product">Conoce cómo nuestra plataforma optimiza la logística avícola desde la granja hasta tu mesa.</p>
+            <img src="./assets/images/LOGO_SAN_ANIVIA.png" alt="Logo San Anivia" class="info-side-logo">
+        </div>
+        
+        <div class="video-side">
+            <div class="video-container">
+               
+                <div class="video-facade" onclick="loadVideo(this, 'sQIW_mopXCg')">
+                    <img src="./assets/images/fondo pollo.png" alt="Portada Producto" class="video-thumb">
+                    <div class="play-button"><i class="fas fa-play"></i></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="slide slide-4 rutas-page">
-            <div class="rutas-container">
-                <aside class="menu-admin">
-                    <div class="menu-brand">
-                        <div class="san-anivia-logo">San Anivia</div>
-                    </div>
-                    <div class="menu-nav-options">
-                        <div class="button-var active">
-                            <span class="icon home-icon">🏠</span>
-                            <span class="dashboard-text">Dashboard</span>
-                        </div>
-                        <div class="button-var selected">
-                            <span class="icon route-icon selected-icon">🚚</span>
-                            <span class="dashboard-text selected-text">Rutas</span>
-                        </div>
-                        <div class="button-var">
-                            <span class="icon luggage-icon">📦</span>
-                            <span class="dashboard-text">Pedidos</span>
-                        </div>
-                        <div class="button-var">
-                            <span class="icon chart-icon">📊</span>
-                            <span class="dashboard-text">Reportes</span>
-                        </div>
-                        <div class="button-var">
-                            <span class="icon users-icon">👥</span>
-                            <span class="dashboard-text">Usuarios</span>
-                        </div>
-                    </div>
-                    <div class="menu-user-profile">
-                        <div class="profile-frame">
-                            <div class="avatar-shape">👤</div>
-                            <div class="user-info">
-                                <span class="user-name">Jhon Doe</span>
-                                <span class="user-role">Administrador</span>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                <main class="main-content-rutas">
-                    <div class="content-wrapper">
-                        <div class="content-header-rutas">
-                            <h2 class="title-rutas">Rutas de distribución</h2>
-                            <div class="header-actions">
-                                <button class="button-primary">
-                                    <span class="icon-btn">⚡</span>
-                                    Más recientes
-                                </button>
-                                <button class="button-primary">
-                                    <span class="icon-btn">🕒</span>
-                                    Historial
-                                </button>
-                            </div>
-                        </div>
-                        <div class="content-body-rutas">
-                            <img src="./assets/images/MAPA_DISTRIBUCION.png" alt="MAPA_DISTRIBUCION" class="map-placeholder">
-                            
-                        </div>
-                    </div>
-                </main>
+    <!-- 4. ESTADÍSTICAS -->
+    <section class="stats-section orange-bg">
+        <h2 class="section-title white-text" data-translate="title_stats">Rendimiento Anual</h2>
+        <p class="section-desc white-text" data-translate="desc_stats">Evidencia de éxito en ventas mensuales (Toneladas).</p>
+        
+        <div class="chart-wrapper">
+            <div class="bar-row"><span class="bar-label">ENE</span><div class="bar-fill green" style="width: 45%;"></div><span class="bar-val">950T</span></div>
+            <div class="bar-row"><span class="bar-label">FEB</span><div class="bar-fill yellow" style="width: 55%;"></div><span class="bar-val">1020T</span></div>
+            <div class="bar-row"><span class="bar-label">MAR</span><div class="bar-fill red" style="width: 65%;"></div><span class="bar-val">1090T</span></div>
+            <div class="bar-row"><span class="bar-label">ABR</span><div class="bar-fill green" style="width: 40%;"></div><span class="bar-val">950T</span></div>
+            <div class="bar-row"><span class="bar-label">MAY</span><div class="bar-fill yellow" style="width: 70%;"></div><span class="bar-val">1120T</span></div>
+            <div class="bar-row"><span class="bar-label">JUN</span><div class="bar-fill red" style="width: 68%;"></div><span class="bar-val">1075T</span></div>
+            <div class="bar-row"><span class="bar-label">JUL</span><div class="bar-fill green" style="width: 85%;"></div><span class="bar-val">1250T</span></div>
+            <div class="bar-row"><span class="bar-label">AGO</span><div class="bar-fill yellow" style="width: 75%;"></div><span class="bar-val">1180T</span></div>
+            <div class="bar-row"><span class="bar-label">SEP</span><div class="bar-fill red" style="width: 48%;"></div><span class="bar-val">970T</span></div>
+            <div class="bar-row"><span class="bar-label">OCT</span><div class="bar-fill green" style="width: 69%;"></div><span class="bar-val">1100T</span></div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICIOS -->
+    <section class="services-section">
+        <h2 class="section-title" data-translate="title_services">Nuestras Rutas Principales</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="icon">🚚</span>
+                <h3 data-translate="ruta_norte">Ruta Lima Norte</h3>
+                <p data-translate="desc_norte">Cobertura completa de Los Olivos y Comas.</p>
             </div>
-        </section>
-
-        <section class="slide slide-5 profile-page">
-            <div class="profile-main-container">
-                
-                <div class="profile-header-strip">
-                    <h2 class="profile-title">Perfil Usuario</h2>
-                    <h5 class="profile-brand-small">San Anivia</h5>
-                </div>
-                
-                <img src="./assets/images/LOGO_SAN_ANIVIA.png" alt="Logo de San Anivia" class="profile-avatar-placeholder">
-
-                <div class="profile-data-block">
-                    <h2 class="data-block-title">DATOS DEL USUARIO</h2>
-
-                    <div class="data-fields">
-                        <p class="data-field">Nombre: Mauricio</p>
-                        <p class="data-field">Apellidos: Napa</p>
-                        <p class="data-field">Pedidos: XXXXXXX</p>
-                        <p class="data-field">Empresa de compra: XXXXXXX</p>
-                    </div>
-                </div>
-                <img src="./assets/images/POLLITO_GOD.png" alt="POLLITO_GOD" class="profile-decoration-image">
+            <div class="service-card">
+                <span class="icon">🏢</span>
+                <h3 data-translate="ruta_centro">Ruta Lima Centro</h3>
+                <p data-translate="desc_centro">Distribución express en Cercado y La Victoria.</p>
             </div>
-        </section>
-
-        <section class="slide slide-6 gallery-page">
-            <div class="gallery-main-container">
-
-                <h1 class="gallery-title-brand">San Anivia</h1>
-                
-                <img src="./assets/images/LOGO_SAN_ANIVIA.png" alt="Logo de San Anivia" class="image-placeholder image-8">
-                
-                <div class="horizontal-lines">
-                    <div class="line-hr"></div>
-                    <div class="line-hr"></div>
-                    <div class="line-hr"></div>
-                    <div class="line-hr"></div>
-                    <div class="line-hr"></div>
-                    <div class="line-hr"></div>
-                    <div class="line-hr"></div>
-                </div>
-
-                <div class="image-gallery">
-                    <img src="./assets/images/DECO_POLLOS_1.png" alt="DECO_POLLOS_1" class="image-placeholder image-11">
-                    <img src="./assets/images/DECO_POLLOS_2.png" alt="DECO_POLLOS_2" class="image-placeholder image-12">
-                    <img src="./assets/images/DECO_POLLOS_3.png" alt="DECO_POLLOS_3" class="image-placeholder image-13">
-                    <img src="./assets/images/POLLITO_BONITO.png" alt="POLLITO_BONITO" class="image-placeholder image-10">
-                    
-                </div>
+            <div class="service-card">
+                <span class="icon">🌊</span>
+                <h3 data-translate="ruta_sur">Ruta Lima Sur</h3>
+                <p data-translate="desc_sur">Entregas en Miraflores y Barranco.</p>
             </div>
-        </section>
+        </div>
+        <a href="index4.html" class="secondary-button" data-translate="btn_all_routes">Ver Todas las Rutas</a>
+    </section>
 
-    </div>
+    <!-- 6. EQUIPO (FOTO TEAM) -->
+    <section class="team-section">
+        <h2 class="section-title" data-translate="title_team">Sobre el Equipo</h2>
+        <p class="section-desc" data-translate="desc_team">El talento detrás de la innovación.</p>
+        
+        <div class="video-container">
+            <!-- VIDEO 2: Usa fondo_team.png -->
+            <div class="video-facade" onclick="loadVideo(this, 'sQIW_mopXCg')">
+                <img src="./assets/images/fondo team.png" alt="Portada Equipo" class="video-thumb">
+                <div class="play-button"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </section>
 
-    <script src="./assets/scripts/main.js"></script>
+    <!-- 7. GALERÍA (2x2) -->
+    <section class="gallery-section">
+        <h2 class="gallery-title" data-translate="gallery_title">Galería San Anivia</h2>
+        <div class="gallery-grid">
+            <img src="./assets/images/DECO_POLLOS_1.png" alt="Galeria 1" class="gallery-img">
+            <img src="./assets/images/pollus.png" alt="Galeria 2" class="gallery-img">
+            <img src="./assets/images/DECO_POLLOS_2.png" alt="Galeria 3" class="gallery-img">
+            <img src="./assets/images/pollis.png" alt="Galeria 4" class="gallery-img">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer red-bg">
+        <p class="white-text" data-translate="footer_rights">© 2025 San Anivia Corporation. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="./assets/scripts/translation.js"></script>
+
+    <script>
+        function loadVideo(element, videoId) {
+            var container = element.parentElement; 
+            // Crea el iframe limpio
+            var iframeCode = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            // Reemplaza la imagen por el video
+            container.innerHTML = iframeCode;
+        }
+    </script>
 
 </body>
 </html>
