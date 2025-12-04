@@ -6,74 +6,120 @@
     <title>Rutas de Distribución - San Anivia</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600&family=Young+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Work+Sans:wght@400;600&family=Poppins:wght@600&display=swap');
     </style>
     
-    <link rel="stylesheet" href="./assets/styles/styles_snapping.css">
+    <!-- CSS Específico de Rutas -->
     <link rel="stylesheet" href="./assets/styles/styles_snapping4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="page1-header" style="position: relative; left: 0; transform: none; width: 100%; max-width: none;">
-        <div class="header-banner" style="height: 180px;">
-            <h1 class="san-anivia-title" style="top: 50%; transform: translateY(-50%); width: 100%; text-align: center; font-size: 3.5vw;">
-                San Anivia / Rutas de Distribución
-            </h1>
+    <!-- 1. CABECERA UNIFICADA (Igual a las demás) -->
+    <header class="main-header">
+        <div class="header-top orange-bg">
+            <div class="brand-group">
+                <img src="./assets/images/LOGO_SAN_ANIVIA.png" alt="Logo San Anivia" class="header-logo">
+                <h1 class="logo-text" data-translate="header_rutas">San Anivia / Rutas</h1>
+            </div>
+            
+            <div class="language-switcher">
+                <button id="btn-es" class="lang-btn" onclick="changeLanguage('es')">🇪🇸 ES</button>
+                <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">🇺🇸 EN</button>
+            </div>
         </div>
-        <div class="red-bar-menu" style="top: -5px;">
-            <a href="index.html" class="menu-item" style="text-decoration: none;">
-                <span class="menu-text">Volver al Inicio</span>
-            </a>
-        </div>
-    </div>
-
-    <div class="rutas-container">
         
-        <div class="rutas-header">
-            <h2 class="rutas-title">Rutas de distribución</h2>
-            <p class="rutas-subtitle">A continuación se le presentarán las siguientes rutas de distribución.</p>
+        <nav class="header-nav red-bg">
+            <a href="index.html" class="menu-item">
+                <span class="menu-text" data-translate="nav_back">Volver al Inicio</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL (Split Layout) -->
+    <div class="rutas-wrapper">
+        
+        <div class="rutas-intro">
+            <h2 class="rutas-title" data-translate="rutas_title">Rutas de Distribución</h2>
+            <p class="rutas-subtitle" data-translate="rutas_subtitle">A continuación se le presentarán las zonas de cobertura actuales.</p>
         </div>
-        <div class="rutas-grid">
+
+        <div class="rutas-layout">
             
-            <div class="ruta-card">
-                <h3>Ruta Lima Norte</h3>
-                <div class="ruta-status">Activa</div>
-                <p>Cobertura completa de Los Olivos, Comas, Independencia y San Martín de Porres. Entregas programadas 2 veces al día.</p>
-            </div>
-            
-            <div class="ruta-card">
-                <h3>Ruta Lima Centro</h3>
-                <div class="ruta-status">Activa</div>
-                <p>Distribución express en Cercado de Lima, La Victoria, Lince y Breña. Alta prioridad para restaurantes y mercados.</p>
-            </div>
-            
-            <div class="ruta-card">
-                <h3>Ruta Lima Sur</h3>
-                <div class="ruta-status">Activa</div>
-                <p>Entregas en Miraflores, Barranco, Surco y Chorrillos. Cadena de frío monitoreada por GPS para garantizar frescura.</p>
-            </div>
-            
-            <div class="ruta-card">
-                <h3>Ruta Lima Este</h3>
-                <div class="ruta-status programada">Programada</div>
-                <p>Próxima activación para La Molina, Ate Vitarte y Santa Anita. Actualmente en fase de optimización logística.</p>
+            <!-- COLUMNA 1: TARJETAS DE RUTAS -->
+            <div class="rutas-list">
+                
+                <!-- Ruta 1 -->
+                <div class="ruta-card">
+                    <div class="card-header">
+                        <h3 data-translate="ruta_norte">Ruta Lima Norte</h3>
+                        <span class="status-badge active" data-translate="status_active">Activa</span>
+                    </div>
+                    <p data-translate="desc_norte">Cobertura completa de Los Olivos, Comas, Independencia y San Martín de Porres. Entregas programadas 2 veces al día.</p>
+                </div>
+                
+                <!-- Ruta 2 -->
+                <div class="ruta-card">
+                    <div class="card-header">
+                        <h3 data-translate="ruta_centro">Ruta Lima Centro</h3>
+                        <span class="status-badge active" data-translate="status_active">Activa</span>
+                    </div>
+                    <p data-translate="desc_centro">Distribución express en Cercado de Lima, La Victoria, Lince y Breña. Alta prioridad para restaurantes y mercados.</p>
+                </div>
+                
+                <!-- Ruta 3 -->
+                <div class="ruta-card">
+                    <div class="card-header">
+                        <h3 data-translate="ruta_sur">Ruta Lima Sur</h3>
+                        <span class="status-badge active" data-translate="status_active">Activa</span>
+                    </div>
+                    <p data-translate="desc_sur">Entregas en Miraflores, Barranco, Surco y Chorrillos. Cadena de frío monitoreada por GPS para garantizar frescura.</p>
+                </div>
+                
+                <!-- Ruta 4 -->
+                <div class="ruta-card">
+                    <div class="card-header">
+                        <h3 data-translate="ruta_este">Ruta Lima Este</h3>
+                        <span class="status-badge scheduled" data-translate="status_scheduled">Programada</span>
+                    </div>
+                    <p data-translate="desc_este">Próxima activación para La Molina, Ate Vitarte y Santa Anita. Actualmente en fase de optimización logística.</p>
+                </div>
+
+                <!-- Ruta 5 -->
+                <div class="ruta-card">
+                    <div class="card-header">
+                        <h3 data-translate="ruta_callao">Ruta Callao</h3>
+                        <span class="status-badge active" data-translate="status_active">Activa</span>
+                    </div>
+                    <p data-translate="desc_callao">Logística desde el puerto y almacenes centrales. Cobertura de Bellavista, La Perla y Ventanilla.</p>
+                </div>
+
+                <!-- Ruta 6 -->
+                <div class="ruta-card">
+                    <div class="card-header">
+                        <h3 data-translate="ruta_surchico">Ruta Sur Chico</h3>
+                        <span class="status-badge scheduled" data-translate="status_scheduled">Programada</span>
+                    </div>
+                    <p data-translate="desc_surchico">Expansión de ruta para Lurín, Pachacamac y Punta Hermosa. Lanzamiento programado para el próximo trimestre.</p>
+                </div>
+
             </div>
 
-            <div class="ruta-card">
-                <h3>Ruta Callao</h3>
-                <div class="ruta-status">Activa</div>
-                <p>Logística desde el puerto y almacenes centrales. Cobertura de Bellavista, La Perla y Ventanilla.</p>
+            <!-- COLUMNA 2: MAPA (Para no desperdiciar la imagen) -->
+            <div class="map-container">
+                <div class="map-frame">
+                    <img src="./assets/images/MAPA_DISTRIBUCION.png" alt="Mapa de Distribución" class="map-image">
+                    <div class="map-overlay">
+                        <span class="map-tag"><i class="fas fa-map-marker-alt"></i> Cobertura en Tiempo Real</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="ruta-card">
-                <h3>Ruta Sur Chico</h3>
-                <div class="ruta-status programada">Programada</div>
-                <p>Expansión de ruta para Lurín, Pachacamac y Punta Hermosa. Lanzamiento programado para el próximo trimestre.</p>
-            </div>
-            </div>
+        </div>
     </div>
 
-    <script src="./assets/scripts/main4.js"></script>
+    <!-- Script de Traducción (Ya lo tienes actualizado) -->
+    <script src="./assets/scripts/translation.js"></script>
 
 </body>
 </html>
