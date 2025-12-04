@@ -9,48 +9,70 @@
         @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600;700&family=Young+Serif&display=swap');
     </style>
     
-    <link rel="stylesheet" href="./assets/styles/styles_snapping.css">
+    <!-- Vinculamos el CSS -->
     <link rel="stylesheet" href="./assets/styles/styles_snapping3.css">
 </head>
 <body>
 
-    <div class="page1-header" style="position: relative; left: 0; transform: none; width: 100%; max-width: none;">
+    <div class="page1-header">
         
-        <div class="header-banner" style="height: 180px;">
-            <h1 class="san-anivia-title" style="top: 50%; transform: translateY(-50%); width: 100%; text-align: center; font-size: 3.5vw;">
-                San Anivia / Canales de Atención
-            </h1>
+        <!-- BANNER NARANJA -->
+        <div class="header-banner">
+            <div class="banner-content">
+                <h1 class="san-anivia-title" data-translate="header_contact">
+                    San Anivia / Canales de Atención
+                </h1>
+                
+                <!-- BOTONES DE IDIOMA (Integrados) -->
+                <div class="language-switcher">
+                    <button id="btn-es" class="lang-btn" onclick="changeLanguage('es')">🇪🇸 ES</button>
+                    <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">🇺🇸 EN</button>
+                </div>
+            </div>
         </div>
-        <div class="red-bar-menu" style="top: -5px;">
-            <a href="index.html" class="menu-item" style="text-decoration: none;">
-                <span class="menu-text">Volver al Inicio</span>
+
+        <!-- BARRA ROJA -->
+        <div class="red-bar-menu">
+            <a href="index.html" class="menu-item">
+                <span class="menu-text" data-translate="nav_back">Volver al Inicio</span>
             </a>
         </div>
     </div>
 
+    <!-- CONTENEDOR DE CONTACTO -->
     <div class="contact-container">
-        <h2>Contáctanos</h2>
-        <p>Estamos listos para atenderte. Puedes encontrarnos en:</p>
+        <h2 data-translate="contact_title">Contáctanos</h2>
+        <p data-translate="contact_subtitle">Estamos listos para atenderte. Puedes encontrarnos en:</p>
         
         <div class="contact-text-list">
-            <p class="contact-text-item">
+            <!-- Whatsapp -->
+            <div class="contact-text-item">
                 <img src="./assets/images/logo_whatsapp.png" alt="Whatsapp Logo" class="contact-logo-in-text">
-                Whatsapp: +51 9xx xxx xxx
-            </p>
-            <p class="contact-text-item">
+                <span data-translate="lbl_whatsapp">Whatsapp: +51 9xx xxx xxx</span>
+            </div>
+            
+            <!-- Instagram -->
+            <div class="contact-text-item">
                 <img src="./assets/images/logo_instagram.png" alt="Instagram Logo" class="contact-logo-in-text">
-                Instagram: @SanAnivia_
-            </p>
-            <p class="contact-text-item">
+                <span data-translate="lbl_instagram">Instagram: @SanAnivia_</span>
+            </div>
+            
+            <!-- Facebook -->
+            <div class="contact-text-item">
                 <img src="./assets/images/logo_facebook.png" alt="Facebook Logo" class="contact-logo-in-text">
-                Facebook: San Anivia Proyecto
-            </p>
-            <p class="contact-text-item">
+                <span data-translate="lbl_facebook">Facebook: San Anivia Proyecto</span>
+            </div>
+            
+            <!-- Twitter -->
+            <div class="contact-text-item">
                 <img src="./assets/images/logo_twitter_x.png" alt="Twitter X Logo" class="contact-logo-in-text">
-                Twitter / X : @SanAnivia_
-            </p>
+                <span data-translate="lbl_twitter">Twitter / X : @SanAnivia_</span>
+            </div>
         </div>
     </div>
+
+    <!-- Script de Traducción -->
+    <script src="./assets/scripts/translation.js"></script>
 
 </body>
 </html>
