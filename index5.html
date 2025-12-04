@@ -9,76 +9,112 @@
         @import url('https://fonts.googleapis.com/css2?family=Gopher:wght@300;700&family=Barlow:wght@700&family=Roboto:wght@500&family=Kaushan+Script&family=Rhodium+Libre&family=Spline+Sans+Mono&family=Work+Sans:wght@400;550;700&family=Poppins:wght@600&family=Young+Serif&display=swap');
     </style>
     
-    <link rel="stylesheet" href="./assets/styles/styles_snapping.css">
-    
     <link rel="stylesheet" href="./assets/styles/styles_snapping5.css">
 </head>
 <body>
 
-    <div class="page1-header" style="position: relative; left: 0; transform: none; width: 100%; max-width: none;">
-        <div class="header-banner" style="height: 180px;">
-            <h1 class="san-anivia-title" style="top: 50%; transform: translateY(-50%); width: 100%; text-align: center; font-size: 3.5vw;">
-                San Anivia / Preguntas Frecuentes (FAQ)
-            </h1>
+    <!-- CABECERA UNIFICADA (Naranja + Rojo) -->
+    <div class="page1-header">
+        
+        <!-- BANNER NARANJA -->
+        <div class="header-banner">
+            <div class="banner-content">
+                <h1 class="san-anivia-title" data-translate="header_faq">
+                    San Anivia / Preguntas Frecuentes (FAQ)
+                </h1>
+                
+                <!-- Botones de Idioma -->
+                <div class="language-switcher">
+                    <button id="btn-es" class="lang-btn" onclick="changeLanguage('es')">🇪🇸 ES</button>
+                    <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">🇺🇸 EN</button>
+                </div>
+            </div>
         </div>
-        <div class="red-bar-menu" style="top: -5px;">
-            <a href="index.html" class="menu-item" style="text-decoration: none;">
-                <span class="menu-text">Volver al Inicio</span>
+
+        <!-- BARRA ROJA -->
+        <div class="red-bar-menu">
+            <a href="index.html" class="menu-item">
+                <span class="menu-text" data-translate="nav_back">Volver al Inicio</span>
             </a>
         </div>
     </div>
 
+    <!-- CONTENEDOR FAQ -->
     <div class="faq-container">
-        <h2 class="faq-main-title">Preguntas Frecuentes</h2>
+        <h2 class="faq-main-title" data-translate="faq_title">Preguntas Frecuentes</h2>
         
-        <div class="faq-item">
+        <!-- Pregunta 1 -->
+        <div class="faq-item" onclick="toggleAnswer(this)">
             <div class="faq-question">
-                <h3>¿Qué es San Anivia y a qué se dedica?</h3>
+                <h3 data-translate="q1">¿Qué es San Anivia y a qué se dedica?</h3>
+                <span class="toggle-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>San Anivia es una empresa líder en el sector avícola, especializada en la producción y distribución de productos de alta calidad. Nos diferenciamos por nuestra avanzada plataforma tecnológica que utiliza <strong>automatización</strong> y <strong>trazabilidad</strong> completa para garantizar la eficiencia y frescura en cada pedido.</p>
+                <p data-translate="a1">San Anivia es una empresa líder en el sector avícola, especializada en la producción y distribución de productos de alta calidad.</p>
             </div>
         </div>
 
-        <div class="faq-item">
+        <!-- Pregunta 2 -->
+        <div class="faq-item" onclick="toggleAnswer(this)">
             <div class="faq-question">
-                <h3>¿Cómo puedo crear una cuenta de usuario?</h3>
+                <h3 data-translate="q2">¿Cómo puedo crear una cuenta de usuario?</h3>
+                <span class="toggle-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Es muy sencillo. Simplemente haga clic en el botón <strong>"Perfil"</strong> en el menú principal (en la parte superior de la página de inicio). Esto lo redirigirá al formulario de registro donde podrá ingresar sus datos.</p>
+                <p data-translate="a2">Es muy sencillo. Simplemente haga clic en el botón "Perfil" en el menú principal. Esto lo redirigirá al formulario de registro.</p>
             </div>
         </div>
         
-        <div class="faq-item">
+        <!-- Pregunta 3 -->
+        <div class="faq-item" onclick="toggleAnswer(this)">
             <div class="faq-question">
-                <h3>¿Cómo puedo ver las rutas de distribución?</h3>
+                <h3 data-translate="q3">¿Cómo puedo ver las rutas de distribución?</h3>
+                <span class="toggle-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Para consultar las rutas activas y programadas, haga clic en el botón <strong>"Rutas"</strong> en el menú principal. Será dirigido a una página dedicada con el detalle de las zonas de cobertura, estado de la ruta y horarios.</p>
+                <p data-translate="a3">Para consultar las rutas activas y programadas, haga clic en el botón "Rutas" en el menú principal.</p>
             </div>
         </div>
 
-        <div class="faq-item">
+        <!-- Pregunta 4 -->
+        <div class="faq-item" onclick="toggleAnswer(this)">
             <div class="faq-question">
-                <h3>¿Para quién es esta plataforma?</h3>
+                <h3 data-translate="q4">¿Para quién es esta plataforma?</h3>
+                <span class="toggle-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Esta plataforma está diseñada para dos grupos principales: <strong>Clientes y Proveedores</strong> que buscan información comercial y de rendimiento, y nuestro <strong>Personal Interno</strong>, que requiere acceso a visualizaciones de gestión y logística.</p>
+                <p data-translate="a4">Esta plataforma está diseñada para Clientes, Proveedores y nuestro Personal Interno.</p>
             </div>
         </div>
         
-        <div class="faq-item">
+        <!-- Pregunta 5 -->
+        <div class="faq-item" onclick="toggleAnswer(this)">
             <div class="faq-question">
-                <h3>¿Qué muestra la "Tabla de Rendimiento Anual"?</h3>
+                <h3 data-translate="q5">¿Qué muestra la "Tabla de Rendimiento Anual"?</h3>
+                <span class="toggle-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Esa tabla (en la página principal) es una visualización de nuestro éxito en ventas mensuales, comparando la cantidad de toneladas distribuidas cada mes. Es una muestra de nuestra capacidad y crecimiento constante en el mercado.</p>
+                <p data-translate="a5">Esa tabla es una visualización de nuestro éxito en ventas mensuales, comparando toneladas distribuidas.</p>
             </div>
         </div>
 
     </div>
 
-    <script src="./assets/scripts/main5.js"></script>
+    <!-- Scripts -->
+    <script src="./assets/scripts/translation.js"></script>
+    
+    <!-- Script pequeño para abrir/cerrar preguntas -->
+    <script>
+        function toggleAnswer(element) {
+            element.classList.toggle('active');
+            const icon = element.querySelector('.toggle-icon');
+            if (element.classList.contains('active')) {
+                icon.textContent = '-';
+            } else {
+                icon.textContent = '+';
+            }
+        }
+    </script>
 
 </body>
 </html>
